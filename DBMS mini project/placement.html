@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Information | Campus Knowledge Repository">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="app-page placement-page">
+
+
+    <!-- =========================================================
+         BACKGROUND
+         ========================================================= -->
+
+    <div class="app-background">
+
+        <div class="app-orb app-orb-one"></div>
+        <div class="app-orb app-orb-two"></div>
+        <div class="app-orb app-orb-three"></div>
+
+        <div class="app-arc app-arc-one"></div>
+        <div class="app-arc app-arc-two"></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         APPLICATION SHELL
+         ========================================================= -->
+
+    <div class="app-shell" id="appShell">
+
+
+        <!-- =====================================================
+             STUDENT SIDEBAR
+             ===================================================== -->
+
+        <aside
+            class="sidebar"
+            id="studentSidebar"
+        >
+
+
+            <!-- Brand -->
+            <div class="sidebar-brand">
+
+                <div class="sidebar-logo">
+
+                    <img
+                        src="assets/logo.png"
+                        alt="Campus Knowledge Repository"
+                    >
+
+                </div>
+
+                <div class="sidebar-brand-text">
+
+                    <span>
+                        Campus Knowledge
+                    </span>
+
+                    <span>
+                        Repository
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+            <nav
+                class="sidebar-navigation"
+                aria-label="Student navigation"
+            >
+
+
+                <!-- Dashboard -->
+                <a
+                    href="dashboard.html"
+                    class="sidebar-link"
+                    data-page="dashboard"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5"></path>
+                            <path d="M5 9.5V21h14V9.5"></path>
+                            <path d="M9 21v-6h6v6"></path>
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+
+                <!-- Interview -->
+                <a
+                    href="interview.html"
+                    class="sidebar-link"
+                    data-page="interview"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect
+                                x="3"
+                                y="7"
+                                width="18"
+                                height="13"
+                                rx="2"
+                            ></rect>
+
+                            <path d="M8 7V5h8v2"></path>
+                            <path d="M3 12h18"></path>
+                            <path d="M10 12v2h4v-2"></path>
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Interview Experiences
+                    </span>
+
+                </a>
+
+
+
+                <!-- Hackathon -->
+                <a
+                    href="hackathon.html"
+                    class="sidebar-link"
+                    data-page="hackathon"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8 7h8"></path>
+                            <path d="M9 4h6v3H9z"></path>
+                            <path d="M7 7v3"></path>
+                            <path d="M17 7v3"></path>
+                            <path d="M6 10h12"></path>
+                            <path d="M12 10v8"></path>
+                            <path d="M9 21h6"></path>
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Hackathon Experiences
+                    </span>
+
+                </a>
+
+
+
+                <!-- Club -->
+                <a
+                    href="club.html"
+                    class="sidebar-link"
+                    data-page="club"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <circle
+                                cx="9"
+                                cy="8"
+                                r="3"
+                            ></circle>
+
+                            <circle
+                                cx="17"
+                                cy="9"
+                                r="2.5"
+                            ></circle>
+
+                            <path
+                                d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"
+                            ></path>
+
+                            <path
+                                d="M15 15c3 0 5 2 5 5"
+                            ></path>
+
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Club Reviews
+                    </span>
+
+                </a>
+
+
+
+                <!-- Resources -->
+                <a
+                    href="resources.html"
+                    class="sidebar-link"
+                    data-page="resources"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="M5 3h10l4 4v14H5z"></path>
+
+                            <path d="M15 3v5h5"></path>
+
+                            <path d="M8 12h8"></path>
+
+                            <path d="M8 16h8"></path>
+
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Academic Resources
+                    </span>
+
+                </a>
+
+
+
+                <!-- Placement -->
+                <a
+                    href="placement.html"
+                    class="sidebar-link active"
+                    data-page="placement"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="M5 20V10"></path>
+
+                            <path d="M12 20V5"></path>
+
+                            <path d="M19 20V8"></path>
+
+                        </svg>
+
+                    </span>
+
+                    <span class="sidebar-link-text">
+                        Placement Information
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+
+            <!-- Logout -->
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    class="sidebar-logout"
+                    id="logoutButton"
+                >
+
+                    <span class="sidebar-link-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="M10 5H5v14h5"></path>
+
+                            <path d="M14 8l4 4-4 4"></path>
+
+                            <path d="M18 12H9"></path>
+
+                        </svg>
+
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             MAIN AREA
+             ===================================================== -->
+
+        <div class="app-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+
+                    <!-- Hamburger -->
+                    <button
+                        type="button"
+                        class="menu-button"
+                        id="sidebarToggle"
+                        aria-label="Toggle navigation"
+                        aria-expanded="true"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+
+
+                    <!-- Brand -->
+                    <a
+                        href="dashboard.html"
+                        class="topbar-brand"
+                    >
+
+                        <span class="topbar-logo">
+
+                            <img
+                                src="assets/logo.png"
+                                alt=""
+                            >
+
+                        </span>
+
+                        <span class="topbar-brand-text">
+                            Campus Knowledge Repository
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Profile -->
+                <div class="topbar-right">
+
+                    <button
+                        type="button"
+                        class="profile-button"
+                        id="profileButton"
+                        aria-label="Open profile"
+                    >
+
+                        <span
+                            class="profile-avatar"
+                            id="topbarProfileAvatar"
+                        >
+
+                            <span id="topbarInitial">
+                                —
+                            </span>
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <main class="page-content placement-content">
+
+
+                <!-- =============================================
+                     HEADER
+                     ============================================= -->
+
+                <section class="content-header">
+
+                    <p class="content-eyebrow">
+                        CAREER
+                    </p>
+
+                    <h1>
+                        Placement Information
+                    </h1>
+
+                    <p class="content-subtitle">
+                        Stay informed about placement opportunities
+                        shared by your TPO.
+                    </p>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     SEARCH
+                     ============================================= -->
+
+                <section class="placement-toolbar">
+
+
+                    <!-- Search -->
+                    <div class="experience-search-wrapper">
+
+                        <span class="search-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <circle
+                                    cx="11"
+                                    cy="11"
+                                    r="7"
+                                ></circle>
+
+                                <path
+                                    d="m16.5 16.5 4 4"
+                                ></path>
+
+                            </svg>
+
+                        </span>
+
+                        <input
+                            type="search"
+                            id="placementSearch"
+                            class="experience-search"
+                            placeholder="Search by company or role..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     FILTERS
+                     ============================================= -->
+
+                <section
+                    class="filter-bar placement-filter-bar"
+                    aria-label="Placement filters"
+                >
+
+
+                    <!-- Company -->
+                    <div class="filter-control">
+
+                        <label
+                            for="placementCompanyFilter"
+                            class="sr-only"
+                        >
+                            Company
+                        </label>
+
+                        <select
+                            id="placementCompanyFilter"
+                            class="filter-select"
+                        >
+
+                            <option value="">
+                                Company
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Role -->
+                    <div class="filter-control">
+
+                        <label
+                            for="placementRoleFilter"
+                            class="sr-only"
+                        >
+                            Role
+                        </label>
+
+                        <select
+                            id="placementRoleFilter"
+                            class="filter-select"
+                        >
+
+                            <option value="">
+                                Role
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Clear -->
+                    <button
+                        type="button"
+                        class="clear-filters-button"
+                        id="clearPlacementFilters"
+                    >
+                        Clear Filters
+                    </button>
+
+                </section>
+
+
+
+                <!-- =============================================
+                     PLACEMENT RESULTS
+                     ============================================= -->
+
+                <section
+                    class="placement-results"
+                    id="placementResults"
+                >
+
+
+                    <!-- =========================================
+                         EMPTY STATE
+                         ========================================= -->
+
+                    <div
+                        class="empty-state placement-empty-state"
+                        id="placementEmptyState"
+                    >
+
+                        <div class="empty-state-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M5 20V10"
+                                ></path>
+
+                                <path
+                                    d="M12 20V5"
+                                ></path>
+
+                                <path
+                                    d="M19 20V8"
+                                ></path>
+
+                            </svg>
+
+                        </div>
+
+
+                        <h2>
+                            No placement information yet
+                        </h2>
+
+
+                        <p>
+                            Placement information published by the
+                            TPO will appear here.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         DYNAMIC PLACEMENT CARDS
+                         
+                         TPO data will be inserted here.
+                         
+                         No dummy companies.
+                         ========================================= -->
+
+                    <div
+                        class="placement-card-grid"
+                        id="placementCardGrid"
+                    ></div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         PLACEMENT DETAILS MODAL
+         ========================================================= -->
+
+    <div
+        class="app-modal-layer"
+        id="placementDetailsModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="details-modal placement-details-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="placementDetailsTitle"
+        >
+
+
+            <!-- Close -->
+            <button
+                type="button"
+                class="modal-close-button"
+                id="closePlacementDetails"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+
+            <!-- ===============================================
+                 HEADER
+                 =============================================== -->
+
+            <div class="details-modal-header">
+
+                <div
+                    class="details-company-icon"
+                    id="placementCompanyIcon"
+                >
+                    —
+                </div>
+
+                <div>
+
+                    <h2 id="placementDetailsTitle">
+                        Placement Information
+                    </h2>
+
+                    <p id="placementDetailsCompany">
+                        —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 KEY INFORMATION
+                 =============================================== -->
+
+            <div
+                class="placement-detail-highlight"
+                id="placementDetailHighlight"
+            >
+
+                <div class="placement-highlight-item">
+
+                    <span class="placement-highlight-label">
+                        Role
+                    </span>
+
+                    <strong id="placementDetailsRole">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="placement-highlight-item">
+
+                    <span class="placement-highlight-label">
+                        Package
+                    </span>
+
+                    <strong id="placementDetailsPackage">
+                        —
+                    </strong>
+
+                </div>
+
+
+
+                <div class="placement-highlight-item">
+
+                    <span class="placement-highlight-label">
+                        Application Deadline
+                    </span>
+
+                    <strong id="placementDetailsDeadline">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 ELIGIBILITY
+                 =============================================== -->
+
+            <div class="details-section">
+
+                <h3>
+                    Eligibility Criteria
+                </h3>
+
+                <p id="placementDetailsEligibility">
+                    —
+                </p>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 SELECTION PROCESS
+                 =============================================== -->
+
+            <div class="details-section">
+
+                <h3>
+                    Selection Process
+                </h3>
+
+                <p id="placementDetailsSelection">
+                    —
+                </p>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 DETAILS
+                 =============================================== -->
+
+            <div class="details-section">
+
+                <h3>
+                    Details
+                </h3>
+
+                <p id="placementDetailsDescription">
+                    —
+                </p>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 DATE
+                 =============================================== -->
+
+            <div
+                class="details-meta"
+                id="placementDetailsMeta"
+            ></div>
+
+
+
+            <!-- Close -->
+            <button
+                type="button"
+                class="secondary-button details-close-button"
+                id="closePlacementDetailsBottom"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         LOGOUT MODAL
+         ========================================================= -->
+
+    <div
+        class="app-modal-layer"
+        id="logoutModal"
+        aria-hidden="true"
+    >
+
+        <div class="app-modal">
+
+            <button
+                type="button"
+                class="modal-close-button"
+                id="logoutModalClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div class="modal-icon">
+                ↪
+            </div>
+
+            <h2>
+                Log out?
+            </h2>
+
+            <p>
+                Are you sure you want to leave the
+                Campus Knowledge Repository?
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelLogout"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="confirmLogout"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

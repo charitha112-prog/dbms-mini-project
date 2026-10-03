@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TPO | Campus Knowledge Repository</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-page tpo-page">
+
+    <div class="app-shell" id="appShell">
+
+        <!-- =========================
+             TPO SIDEBAR
+        ========================== -->
+        <aside class="sidebar" id="tpoSidebar">
+
+            <div class="sidebar-header">
+
+                <div class="brand-mark">
+                    <img src="assets/logo.png"
+                         alt="Campus Knowledge Repository Logo">
+                </div>
+
+                <div class="sidebar-brand">
+                    <span class="sidebar-brand-title">
+                        Campus Knowledge
+                    </span>
+
+                    <span class="sidebar-brand-subtitle">
+                        Repository
+                    </span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-navigation">
+
+                <a href="tpo.html"
+                   class="sidebar-link active">
+
+                    <span class="sidebar-link-icon">
+                        ◈
+                    </span>
+
+                    <span>
+                        Placement Information
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-divider"></div>
+
+
+            <div class="sidebar-bottom">
+
+                <button class="sidebar-link sidebar-logout"
+                        id="logoutButton"
+                        type="button">
+
+                    <span class="sidebar-link-icon">
+                        ↪
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="icon-button sidebar-toggle"
+                            id="sidebarToggle"
+                            type="button"
+                            aria-label="Toggle navigation">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+                    <div class="topbar-brand">
+
+                        <img src="assets/logo.png"
+                             alt="Campus Knowledge Repository Logo">
+
+                        <span>
+                            Campus Knowledge Repository
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <div class="tpo-user-label">
+                        <span class="tpo-user-role">
+                            TPO Admin
+                        </span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTAINER -->
+            <div class="page-container tpo-container">
+
+                <!-- =========================
+                     PAGE HEADER
+                ========================== -->
+                <section class="page-header tpo-page-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ADMINISTRATION
+                        </span>
+
+                        <h1>
+                            Placement Information
+                        </h1>
+
+                        <p>
+                            Publish and manage placement opportunities
+                            for students.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     ACTION CARDS
+                ========================== -->
+                <section class="tpo-action-grid">
+
+                    <!-- ADD -->
+                    <button class="tpo-action-card"
+                            id="tpoAddPlacementButton"
+                            type="button">
+
+                        <div class="tpo-action-icon">
+                            +
+                        </div>
+
+                        <div class="tpo-action-content">
+
+                            <h2>
+                                Add Placement Information
+                            </h2>
+
+                            <p>
+                                Publish a new placement opportunity
+                                with company, role, eligibility and
+                                selection details.
+                            </p>
+
+                            <span class="tpo-action-link">
+                                Add information
+                                <span>→</span>
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- VIEW -->
+                    <button class="tpo-action-card"
+                            id="tpoViewPlacementButton"
+                            type="button">
+
+                        <div class="tpo-action-icon">
+                            ◫
+                        </div>
+
+                        <div class="tpo-action-content">
+
+                            <h2>
+                                View Placement Information
+                            </h2>
+
+                            <p>
+                                Review previously published placement
+                                information and edit records when required.
+                            </p>
+
+                            <span class="tpo-action-link">
+                                View records
+                                <span>→</span>
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </section>
+
+
+                <!-- =========================
+                     ADD PLACEMENT SECTION
+                ========================== -->
+                <section class="content-section tpo-form-section"
+                         id="tpoAddPlacementSection">
+
+                    <div class="section-heading-row">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                NEW RECORD
+                            </span>
+
+                            <h2>
+                                Add Placement Information
+                            </h2>
+
+                            <p>
+                                Enter the details that students will see
+                                on the placement information page.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="tpoPlacementForm"
+                          class="form-card"
+                          novalidate>
+
+                        <div class="form-grid">
+
+                            <!-- COMPANY -->
+                            <div class="form-field">
+
+                                <label for="tpoCompanyName">
+                                    Company Name
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="tpoCompanyName"
+                                    name="company_name"
+                                    placeholder="Enter company name"
+                                    autocomplete="organization"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- ROLE -->
+                            <div class="form-field">
+
+                                <label for="tpoRole">
+                                    Role / Job Title
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="tpoRole"
+                                    name="role"
+                                    placeholder="Enter job title or role"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- PACKAGE -->
+                            <div class="form-field">
+
+                                <label for="tpoPackage">
+                                    Package
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="tpoPackage"
+                                    name="package"
+                                    placeholder="Example: ₹12 LPA"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- APPLICATION DEADLINE -->
+                            <div class="form-field">
+
+                                <label for="tpoApplicationDeadline">
+                                    Application Deadline
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="tpoApplicationDeadline"
+                                    name="application_deadline"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- ELIGIBILITY -->
+                            <div class="form-field form-field-full">
+
+                                <label for="tpoEligibility">
+                                    Eligibility Criteria
+                                    <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="tpoEligibility"
+                                    name="eligibility"
+                                    rows="7"
+                                    placeholder="Enter the complete eligibility criteria..."
+                                    required
+                                ></textarea>
+
+                                <span class="field-hint">
+                                    You can enter any amount of eligibility
+                                    information here.
+                                </span>
+
+                            </div>
+
+
+                            <!-- SELECTION PROCESS -->
+                            <div class="form-field form-field-full">
+
+                                <label for="tpoSelectionProcess">
+                                    Selection Process
+                                    <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="tpoSelectionProcess"
+                                    name="selection_process"
+                                    rows="6"
+                                    placeholder="Describe the selection process..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <!-- DETAILS -->
+                            <div class="form-field form-field-full">
+
+                                <label for="tpoDetails">
+                                    Details
+                                </label>
+
+                                <textarea
+                                    id="tpoDetails"
+                                    name="details"
+                                    rows="7"
+                                    placeholder="Add any additional information students should know..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FORM ACTIONS -->
+                        <div class="form-actions">
+
+                            <button type="button"
+                                    class="secondary-button"
+                                    id="cancelTpoPlacement">
+                                Clear
+                            </button>
+
+                            <button type="submit"
+                                    class="primary-button">
+                                Publish Placement
+                            </button>
+
+                        </div>
+
+
+                        <div class="form-status"
+                             id="tpoFormStatus"
+                             aria-live="polite">
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- =========================
+                     VIEW PLACEMENTS SECTION
+                ========================== -->
+                <section class="content-section tpo-view-section"
+                         id="tpoViewPlacementSection">
+
+                    <div class="section-heading-row">
+
+                        <div>
+
+                            <span class="section-kicker">
+                                PUBLISHED RECORDS
+                            </span>
+
+                            <h2>
+                                Placement Information
+                            </h2>
+
+                            <p>
+                                View and manage placement information
+                                already published by the TPO.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SEARCH / FILTER -->
+                    <div class="content-toolbar tpo-toolbar">
+
+                        <div class="search-box">
+
+                            <span class="search-icon">
+                                ⌕
+                            </span>
+
+                            <input
+                                type="search"
+                                id="tpoPlacementSearch"
+                                placeholder="Search company or role..."
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMPTY STATE -->
+                    <div class="empty-state"
+                         id="tpoPlacementEmptyState">
+
+                        <div class="empty-state-icon">
+                            ◫
+                        </div>
+
+                        <h3>
+                            No placement information yet
+                        </h3>
+
+                        <p>
+                            Published placement opportunities will
+                            appear here once they are added.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="primary-button"
+                            id="emptyTpoAddButton">
+                            Add Placement Information
+                        </button>
+
+                    </div>
+
+
+                    <!-- DATABASE RECORDS WILL APPEAR HERE -->
+                    <div class="card-grid"
+                         id="tpoPlacementCardGrid">
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         EDIT PLACEMENT MODAL
+    ========================== -->
+    <div class="modal-overlay"
+         id="tpoEditModal"
+         aria-hidden="true">
+
+        <div class="modal modal-large">
+
+            <button class="modal-close"
+                    id="closeTpoEditModal"
+                    type="button"
+                    aria-label="Close">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="section-kicker">
+                    EDIT RECORD
+                </span>
+
+                <h2>
+                    Edit Placement Information
+                </h2>
+
+                <p>
+                    Update the information currently visible to students.
+                </p>
+
+            </div>
+
+
+            <form id="tpoEditPlacementForm"
+                  class="modal-form"
+                  novalidate>
+
+                <input type="hidden"
+                       id="tpoEditPlacementId"
+                       name="placement_id">
+
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="tpoEditCompanyName">
+                            Company Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tpoEditCompanyName"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="tpoEditRole">
+                            Role / Job Title
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tpoEditRole"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="tpoEditPackage">
+                            Package
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tpoEditPackage"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="tpoEditApplicationDeadline">
+                            Application Deadline
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="tpoEditApplicationDeadline"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field form-field-full">
+
+                        <label for="tpoEditEligibility">
+                            Eligibility Criteria
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="tpoEditEligibility"
+                            rows="7"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-field form-field-full">
+
+                        <label for="tpoEditSelectionProcess">
+                            Selection Process
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="tpoEditSelectionProcess"
+                            rows="6"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-field form-field-full">
+
+                        <label for="tpoEditDetails">
+                            Details
+                        </label>
+
+                        <textarea
+                            id="tpoEditDetails"
+                            rows="7"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="cancelTpoEdit">
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+                        Save Changes
+                    </button>
+
+                </div>
+
+
+                <div class="form-status"
+                     id="tpoEditStatus"
+                     aria-live="polite">
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         LOGOUT MODAL
+    ========================== -->
+    <div class="modal-overlay"
+         id="logoutModal"
+         aria-hidden="true">
+
+        <div class="modal modal-small">
+
+            <button class="modal-close"
+                    id="logoutModalClose"
+                    type="button"
+                    aria-label="Close">
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="section-kicker">
+                    SIGN OUT
+                </span>
+
+                <h2>
+                    Logout?
+                </h2>
+
+                <p>
+                    Are you sure you want to leave the repository?
+                </p>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelLogout">
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="confirmLogout">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
